@@ -44,41 +44,12 @@ This MATLAB-based project applies **Fourier Transform analysis** and **digital f
 |----------------------|--------------------------------|-------------------------------|  
 | Butterworth Bandstop | Order=100, Fc1=500Hz, Fc2=3000Hz | `fdesign.bandstop()`          |  
 | Butterworth Low-pass | Order=50, Fc=5000Hz           | `fdesign.lowpass()`           |  
-
----
-
-## **Repository Structure**  
-```
-Audio-Noise-Reduction/  
-├── mainFile.m                      # Main processing script  
-├── BandstopFilter500to3000Hz.m     # Bandstop filter design  
-├── LowPass5000Hz.m                 # Low-pass filter design  
-├── BeepingFourierTransformRaw.m    # Raw audio spectrum analysis  
-├── BeepingFourierTransformFiltered.m # Filtered audio spectrum analysis  
-├── audio_samples/                  # Sample input/output files (optional)  
-│   ├── group_talking.wav           # Example noisy input  
-│   └── group_talking_filtered.wav  # Example cleaned output  
-└── README.md                       # This documentation  
-```
-
 ---
 
 ## **Installation & Setup**  
 ### **Prerequisites**  
 - **MATLAB R2024a+** (with **Signal Processing Toolbox**)  
 - **Audio files** in `.wav` format (48kHz recommended)  
-
-### **Steps**  
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/your-username/Audio-Noise-Reduction.git
-   ```
-2. Open MATLAB and navigate to the project folder.  
-3. Add all `.m` files to your MATLAB path:  
-   ```matlab
-   addpath(genpath(pwd));
-   ```
-
 ---
 
 ## **Usage Guide**  
@@ -106,7 +77,7 @@ audiowrite('cleaned_audio.wav', DataOut2, fs);
 
 ---
 
-## **🎛️ Customization & Parameters**  
+## **Customization & Parameters**  
 ### **1. Adjust Filter Cutoffs**  
 Modify in `BandstopFilter500to3000Hz.m` or `LowPass5000Hz.m`:  
 ```matlab
@@ -127,7 +98,7 @@ N = 50;   % Low-pass order
 
 ---
 
-## **📊 Results & Performance**  
+## **Results & Performance**  
 | Metric               | Raw Audio       | Filtered Audio  | Improvement |  
 |----------------------|-----------------|-----------------|-------------|  
 | Mid-frequency noise  | High            | Minimal         | ~85%        |  
@@ -139,7 +110,7 @@ N = 50;   % Low-pass order
 
 ---
 
-## **⚠️ Troubleshooting**  
+## **Troubleshooting**  
 | Issue                  | Solution                          |  
 |------------------------|-----------------------------------|  
 | "File not found" error | Update paths in `mainFile.m`      |  
@@ -148,14 +119,14 @@ N = 50;   % Low-pass order
 
 ---
 
-## **🔮 Future Improvements**  
+## **Future Improvements**  
 - [ ] **Adaptive filtering** (dynamic noise thresholding)  
 - [ ] **GUI interface** for real-time preview  
 - [ ] **Support for MP3/other formats**  
 
 ---
 
-## **👥 Team & Acknowledgments**  
+## **Team & Acknowledgments**  
 - **Hassan Fareed** (22K-4880) - Lead Developer  
 - **Hamza Nadeem** (22K-4895) - Filter Design  
 - **Abdullah Javed** (22K-4906) - Frequency Analysis  
